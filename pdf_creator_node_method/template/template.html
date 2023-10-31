@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PDF Template</title>
+  <style>
+* {
+    /* Change your font family */
+    font-family: sans-serif;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+  
+   
+
+  </style>
+</head>
+<body>
+  <h1>PDF Template Example</h1>
+{{#each users}}
+ <table class="content-table "id="myTable">
+    <thead>
+      <tr>
+         <th>Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>DOB</th>
+        <th>MaritalStatus</th>
+        <th>AadharNumber</th>
+        <th>BloodGroup</th>
+      </tr>
+    </thead>
+<tr>
+   <td>{{this.Name}}</td>
+        <td>{{this.Gender}}</td>
+        <td>{{this.Email}}</td>
+        <td>{{this.Mobile}}</td>
+        <td>{{this.DOB}}</td>
+        <td>{{this.MaritalStatus}}</td>
+        <td>{{this.AadharNumber}}</td>
+        <td>{{this.BloodGroup}}</td>
+</tr>
+<thead>
+  <tr>
+     <th>Name</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>DOB</th>
+    <th>MaritalStatus</th>
+    <th>AadharNumber</th>
+    <th>BloodGroup</th>
+  </tr>
+</thead>
+ <tr class="active-row">
+  <td>{{this.Name}}</td>
+  <td>{{this.Gender}}</td>
+  <td>{{this.Email}}</td>
+  <td>{{this.Mobile}}</td>
+  <td>{{this.DOB}}</td>
+  <td>{{this.MaritalStatus}}</td>
+  <td>{{this.AadharNumber}}</td>
+  <td>{{this.BloodGroup}}</td>
+</tr>
+<thead>
+  <tr>
+     <th>Name</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>DOB</th>
+    <th>MaritalStatus</th>
+    <th>AadharNumber</th>
+    <th>BloodGroup</th>
+  </tr>
+</thead>
+ <tr>
+  <td>{{this.Name}}</td>
+  <td>{{this.Gender}}</td>
+  <td>{{this.Email}}</td>
+  <td>{{this.Mobile}}</td>
+  <td>{{this.DOB}}</td>
+  <td>{{this.MaritalStatus}}</td>
+  <td>{{this.AadharNumber}}</td>
+  <td>{{this.BloodGroup}}</td>
+</tr>
+<thead>
+  <tr>
+     <th>Name</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>DOB</th>
+    <th>MaritalStatus</th>
+    <th>AadharNumber</th>
+    <th>BloodGroup</th>
+  </tr>
+</thead>
+<tr class="active-row">
+  <td>{{this.Name}}</td>
+  <td>{{this.Gender}}</td>
+  <td>{{this.Email}}</td>
+  <td>{{this.Mobile}}</td>
+  <td>{{this.DOB}}</td>
+  <td>{{this.MaritalStatus}}</td>
+  <td>{{this.AadharNumber}}</td>
+  <td>{{this.BloodGroup}}</td>
+</tr>
+
+    </tbody>
+  </table>
+  {{/each}}
+
+
+<script>
+  var table =document.getElementById('myTable');
+
+  for(var i=0; i<users.length; i++){
+    var row =table.insertRow(i+1);
+    var Namecell =table.insertRow(0);
+    var Gendercell =table.insertRow(1);
+    var Mobile =table.insertRow(3);
+    var DOB =table.insertRow(3);
+    var MaritalStatus =table.insertRow(3);
+    var AadharNumber =table.insertRow(3);
+    var BloodGroup =table.insertRow(3);
+
+  }
+</script>
+  
+
+
+</body>
+</html>
+
